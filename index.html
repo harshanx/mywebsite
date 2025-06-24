@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harshan Portfolio</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto/css/fontisto.min.css">
+  <link rel="icon" href="bluesky.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    .container1 {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      width: 250px;
+      height: 250px;
+      background-color: transparent;
+      margin-left: 50px ;
+      margin-top: 100px;
+      margin-bottom: 0px;
+      position: relative;
+    }
+
+    .item {
+      position: absolute;
+      width: calc(var(--i) * 2.5vmin);
+      border: .9vmin solid #00c8ff;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: transparent;
+      transform: rotateX(70deg) translateZ(50px);
+      box-shadow: 0 0 15px #7c7c7c, inset 0 0 15px #7c7c7c;
+      transform-style: preserve-3d;
+      animation: main1 2s ease-in-out calc(var(--i) * 0.08s) infinite;
+    }
+
+    @keyframes main1 {
+      0% {
+        transform: rotateX(70deg) translateZ(50px);
+      }
+      50% {
+        transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+        filter: hue-rotate(100deg);
+      }
+      100% {
+        transform: rotateX(70deg) translateZ(50px) translateY(0px);
+        filter: hue-rotate(0deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header style="width: 100%; position: fixed; z-index: 1;">
+    <div class="row bg-success">
+      <div class="col-sm-6">
+        <h2 class="p-3 ms-5 text-white">HARSHAN P V</h2>
+      </div>
+      <div class="col-sm-6 text-white">
+        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+          <div class="container-fluid">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active text-white" href="#Home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active text-white" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active text-white" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active text-white" href="#contact">Contact Me</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="Home" style="padding-top: 7em;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="profile.jpeg" alt="" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-6">
+          <h3>Web Dev | CSE Student</h3>
+          <h4>Government Engineering College, Sreekrishnapuram</h4>
+          <blockquote class="blockquote">
+            <p>"I am not what happened to me, I am what I choose to become."</p>
+          </blockquote>
+
+          <!-- 🔵 Animated floating items here -->
+          <div class="container1">
+            <div class="item" style="--i:1"></div>
+            <div class="item" style="--i:2"></div>
+            <div class="item" style="--i:3"></div>
+            <div class="item" style="--i:4"></div>
+            <div class="item" style="--i:5"></div>
+            <div class="item" style="--i:6"></div>
+            <div class="item" style="--i:7"></div>
+            <div class="item" style="--i:8"></div>
+            <div class="item" style="--i:9"></div>
+            <div class="item" style="--i:10"></div>
+            <div class="item" style="--i:11"></div>
+            <div class="item" style="--i:12"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light p-5" id="services">
+    <div class="container">
+      <h1 class="text-center text-primary">Services</h1>
+      <div class="row">
+        <div class="col-md-4 p-2">
+          <div class="card text-center p-2" style="height:20rem;">
+            <i class="bi bi-laptop display-4 text-warning"></i>
+            <b>Web Dev</b>
+            <div class="card-body">
+              <p class="card-text">Turning ideas into interactive digital realities. Creating responsive, interactive, and modern websites using HTML, CSS, JavaScript, and Bootstrap.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-2">
+          <div class="card text-center p-2" style="height:20rem;">
+            <i class="bi bi-laptop display-4 text-info"></i>
+            <b>Graphic Designer</b>
+            <div class="card-body">
+              <p class="card-text">Designing social media posts, posters, and creatives using Canva and other tools.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-2">
+          <div class="card text-center p-2" style="height:20rem;">
+            <i class="bi bi-robot display-4 text-success"></i>
+            <b>Solution Consultant</b>
+            <div class="card-body">
+              <p class="card-text">Providing AI-powered chatbot solutions to help businesses automate customer support and improve engagement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light p-5" id="experience">
+    <div class="container">
+      <h1 class="text-center text-primary">Experience</h1>
+      <div class="row">
+        <div class="col-md-4 p-2">
+          <div class="card text-center p-2" style="height:20rem;">
+            <i class="bi bi-gear-fill display-1 text-dark"></i>
+            <b>Engineering</b>
+            <div class="card-body">
+              <p class="card-text">Computer Science Engineering student at APJ Abdul Kalam Technological University, specializing in Web Development and digital solution consulting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <footer>
+      <div class="container">
+        <h1 class="text-primary text-center">Contact Me</h1>
+        <div class="row">
+          <div class="text-center col-xs-12">
+            <a href="https://www.linkedin.com/in/harshan-p-v-520940297" target="_blank" class="text-decoration-none me-3 p-3">
+              <i class="bi bi-linkedin display-6 text-primary"></i>
+            </a>
+            <a href="https://www.instagram.com/harshan_x7" target="_blank" class="text-decoration-none me-3 p-3">
+              <i class="bi bi-instagram display-6 text-danger"></i>
+            </a>
+            <a href="mailto:harshanpv3@gmail.com" class="text-decoration-none me-3 p-3">
+              <i class="bi bi-envelope-fill display-6 text-warning"></i>
+            </a>
+            <a href="https://github.com/harshanx" target="_blank" class="text-decoration-none p-3">
+              <i class="bi bi-github display-6 text-dark"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
