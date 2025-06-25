@@ -90,3 +90,10 @@ function initializeChatbot() {
 
 // Call initializeChatbot when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", initializeChatbot);
+document.getElementById("user-input").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); 
+    sendMessage();
+  }
+});
+
