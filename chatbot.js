@@ -7,7 +7,7 @@ function sendMessage() {
     // User message bubble (right side)
     chatbox.innerHTML += `
       <div class="d-flex justify-content-end mb-2">
-        <div class="bg-success text-white p-2 rounded" style="max-width: 75%; word-wrap: break-word;">
+        <div class="bg-primary text-white p-2 rounded" style="max-width: 75%; word-wrap: break-word;">
           <b></b> ${message}
         </div>
       </div>`;
@@ -15,7 +15,7 @@ function sendMessage() {
     fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer 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", 
+        "Authorization": "Bearer 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", // Ensure this is your correct key
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
@@ -60,6 +60,8 @@ function sendMessage() {
 
     document.getElementById("user-input").value = "";
 }
+
+// Function to display initial AI messages
 function initializeChatbot() {
     const chatbox = document.getElementById("chatbox");
 
@@ -68,7 +70,7 @@ function initializeChatbot() {
     chatbox.innerHTML += `
       <div class="d-flex justify-content-start mb-2">
         <div class="bg-light text-dark p-2 rounded" style="max-width: 75%; word-wrap: break-word;">
-          <b>AI:</b> ${firstMessage}
+          <b></b> ${firstMessage}
         </div>
       </div>`;
     chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom after first message
@@ -79,7 +81,7 @@ function initializeChatbot() {
         chatbox.innerHTML += `
           <div class="d-flex justify-content-start mb-2">
             <div class="bg-light text-dark p-2 rounded" style="max-width: 75%; word-wrap: break-word;">
-              <b>AI:</b> ${secondMessage}
+              <b></b> ${secondMessage}
             </div>
           </div>`;
         chatbox.scrollTop = chatbox.scrollHeight; // Scroll again after second message
