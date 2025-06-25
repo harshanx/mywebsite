@@ -7,7 +7,7 @@ function sendMessage() {
     // User message bubble (right side)
     chatbox.innerHTML += `
       <div class="d-flex justify-content-end mb-2">
-        <div class="bg-primary text-white p-2 rounded" style="max-width: 75%; word-wrap: break-word;">
+        <div class="bg-success text-white p-2 rounded" style="max-width: 75%; word-wrap: break-word;">
           <b></b> ${message}
         </div>
       </div>`;
