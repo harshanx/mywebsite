@@ -15,7 +15,7 @@ function sendMessage() {
     fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer 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", // Ensure this is your correct key
+        "Authorization": "Bearer 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", 
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
