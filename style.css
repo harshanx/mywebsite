@@ -6,47 +6,105 @@
 
  }
 
+ body {
+   margin: 0;
+   background-color:black;
+   font-family: 'Segoe UI', sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+ }
  
- .container1{
-
-   justify-content: left;
-   align-items: left;
-       display: flex;
-   
-    }
-    .item{
-       position: absolute;
-       width: calc(var(--i)*2.5vmin);
-   border: .9vmin solid #00c8ff;
-   aspect-ratio: 1;
-   border-radius: 50%;
-   background-color: transparent;
-   transform: rotateX(70deg) translateZ(50px);
-   box-shadow: 0px 0px 15px #682aee, inset 0px 0px 15px #0ae641;
-   transform-style: preserve-3d;
-   animation: main1 2s ease-in-out calc(var(--i)*0.08s) infinite;
-    }
-   
-   
-    @keyframes  main1{
-   0%{
-   
+ .chat-container {
+   min-width: 70%;
+   min-height:  400px; ;
+   background-color:#29a452;
+   border-radius: 12px;
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+   overflow: hidden;
+ }
+ 
+ .chat-header {
+  
+   color: #fff;
+   padding: 16px;
+   text-align: center;
+   font-size: 18px;
+   border: 1px solid silver;
+ }
+ 
+ .chat-body {
+   flex: 1;
+   padding: 16px;
+   overflow-y: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+ }
+ 
+ .message {
+   padding: 10px 16px;
+   border-radius: 20px;
+   max-width: 75%;
+   line-height: 1.4;
+ }
+ 
+ .user-message {
+   background: #a0c0ad;
+   align-self: flex-end;
+   border-radius: 15px;
+ }
+ 
+ .bot-message {
+   background: #ececec;
+   align-self: flex-start;
+   border-radius: 15px;
+ }
+ 
+ .chat-footer {
+   display: flex;
+   border-top: 1px solid #ddd;
+ }
+ 
+ .chat-footer input {
+   flex: 1;
+   padding: 14px;
+   border: none;
+   outline: none;
+   font-size: 16px;
+ }
+ 
+ .chat-footer button {
+   background: #2b9348;
+   color: white;
+   border: none;
+   padding: 14px 20px;
+   cursor: pointer;
+ }
+ .rainbow-text {
+   font-weight: bold;
+   font-size: 1.5rem;
+   background: linear-gradient(270deg, violet, indigo, blue, green, yellow, orange, red, violet);
+   background-size: 400% 400%;
+   background-color: black;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: rainbowMove 5s ease infinite;
+   text-shadow: 0 0 8px #f4efef, 0 0 20px #0ff;
+ }
+ 
+ @keyframes rainbowMove {
+   0% {
+     background-position: 0% 50%;
    }
-   50%{
-       transform: rotateX(70deg) translateZ(50px)
-       translateY(-50vmin);
-       filter: hue-rotate(100deg);
-    }
-    100%{
-       transform: rotateX(70deg) translateZ(50px)
-       translateY(0px);
-       filter: hue-rotate(0deg);
-    }}
-   
-   
-   
-     
-     
-   
-   
-   
+   50% {
+     background-position: 100% 50%;
+   }
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+ 
