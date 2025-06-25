@@ -7,7 +7,7 @@ function sendMessage() {
     // User message bubble (right side)
     chatbox.innerHTML += `
       <div class="d-flex justify-content-end mb-2">
-        <div class="bg-success text-white p-2 rounded" style="max-width: 75%; word-wrap: break-word;">
+        <div class="bg-success text-white p-2 rounded" style="max-width: 90%; word-wrap: break-word;">
           <b></b> ${message}
         </div>
       </div>`;
@@ -38,7 +38,7 @@ function sendMessage() {
         // AI reply bubble (left side)
         chatbox.innerHTML += `
           <div class="d-flex justify-content-start mb-2">
-            <div class="bg-light text-dark p-2 rounded" style="max-width: 75%; word-wrap: break-word;">
+            <div class="bg-light text-dark p-2 rounded" style="max-width: 90%; word-wrap: break-word;">
               <b></b> ${reply}
             </div>
           </div>`;
@@ -69,7 +69,7 @@ function initializeChatbot() {
     const firstMessage = "Hey there!";
     chatbox.innerHTML += `
       <div class="d-flex justify-content-start mb-2">
-        <div class="bg-light text-dark p-2 rounded" style="max-width: 75%; word-wrap: break-word;">
+        <div class="bg-light text-dark p-2 rounded" style="max-width: 90%; word-wrap: break-word;">
           <b></b> ${firstMessage}
         </div>
       </div>`;
@@ -80,7 +80,7 @@ function initializeChatbot() {
         const secondMessage = "Please describe your problem briefly, and I'll do my best to help.";
         chatbox.innerHTML += `
           <div class="d-flex justify-content-start mb-2">
-            <div class="bg-light text-dark p-2 rounded" style="max-width: 75%; word-wrap: break-word;">
+            <div class="bg-light text-dark p-2 rounded" style="max-width: 90%; word-wrap: break-word;">
               <b></b> ${secondMessage}
             </div>
           </div>`;
