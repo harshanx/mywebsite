@@ -60,3 +60,31 @@ function sendMessage() {
 
     document.getElementById("user-input").value = "";
 }
+function initializeChatbot() {
+    const chatbox = document.getElementById("chatbox");
+
+    // First AI message
+    const firstMessage = "Hey there!";
+    chatbox.innerHTML += `
+      <div class="d-flex justify-content-start mb-2">
+        <div class="bg-light text-dark p-2 rounded" style="max-width: 75%; word-wrap: break-word;">
+          <b>AI:</b> ${firstMessage}
+        </div>
+      </div>`;
+    chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom after first message
+
+    // Second AI message (you might add a small delay here for a more conversational feel)
+    setTimeout(() => {
+        const secondMessage = "Please describe your problem briefly, and I'll do my best to help.";
+        chatbox.innerHTML += `
+          <div class="d-flex justify-content-start mb-2">
+            <div class="bg-light text-dark p-2 rounded" style="max-width: 75%; word-wrap: break-word;">
+              <b>AI:</b> ${secondMessage}
+            </div>
+          </div>`;
+        chatbox.scrollTop = chatbox.scrollHeight; // Scroll again after second message
+    }, 500); // 500 milliseconds (0.5 second) delay
+}
+
+// Call initializeChatbot when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", initializeChatbot);
