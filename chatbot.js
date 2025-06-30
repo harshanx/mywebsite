@@ -45,7 +45,7 @@ function sendMessage() {
       } else {
         chatbox.innerHTML += `
           <div class="d-flex justify-content-start mb-2 text-danger">
-            <b>Error:</b> No response from AI.
+            <b>Error:</b> due to some api limits cannot load messages.
           </div>`;
       }
 
